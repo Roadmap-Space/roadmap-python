@@ -1,9 +1,14 @@
-from distutils.core import setup
+from setuptools import setup
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setup(
     name="roadmap-py",
-    version="1.0.0",
+    version="1.0.1",
     description="Python bindings for the Roadmap API",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     author="Roadmap",
     author_email="support@roadmap.space",
     url="https://github.com/roadmap-space/roadmap-python",
