@@ -18,14 +18,15 @@ For a comprehensive list of examples, check out the [API documentation](http://a
 
 Here are some examples:
 
-### Get the ideas shown on the widget
+### Get the roadmap
 
 ```python
 from roadmap-py import roadmap
 
-client = roadmap.new("email", "token")
-try:
-  ideas = client.roadmaps.get_widget_ideas("[roadmap id here]")
-except:
-  print("An error occured.")
+roadmap.init("email", "token")
+
+roadmap.roadmaps.get_roadmap(
+  "[roadmap id here]",
+  lambda err, result: print(err, result)
+)
 ```
