@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="roadmap-py",
-    version="1.0.1",
+    version="1.0.2",
     description="Python bindings for the Roadmap API",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -14,7 +14,7 @@ setup(
     url="https://github.com/roadmap-space/roadmap-python",
     license="MIT",
     keywords="roadmap api product",
-    packages=["roadmap"],
+    packages=["roadmap", "roadmap.resources"],
     install_requires=[
         'requests >= 2.22; python_version >= "3.0"',
     ],
